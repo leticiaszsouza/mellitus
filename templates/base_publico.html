@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -16,13 +17,10 @@
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                  <li><button><a href="{{url_for('criarregistro')}}">Criar Registro</a></button></li>
-                  <li><button><a href="{{url_for('dashboard')}}">Dashboard</a></button></li>
-                  <li><button><a href="{{url_for('registros')}}">Meus registros</a></button></li>
-                  <li><button><a href="{{url_for('perfil')}}">Perfil </a></button></li>
+                    <li><button><a href="{{url_for('cadastro')}}">Cadastrar-se</a></button></li>
+                    <li><button><a href="{{url_for('login')}}">Login</a></button></li>
                 </ul>
             </div>
-
         </div>
 
     <section>
