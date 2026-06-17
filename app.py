@@ -25,8 +25,14 @@ def cadastro():
 def dashboard():
     return render_template ('dashboard.html')
 
-@app.route ('/criarregistro')
+@app.route ('/criarregistro', methods=['GET', 'POST'])
 def criarregistro():
+    if request.method == 'POST':
+        data_hora = request.form.get('data-hora')
+        glicemia = request.form.get('glicemia')
+        carboidratos = request.form.get('carboidratos')
+
+        return redirect(url_for('dashboard')) 
     return render_template ('criarregistro.html')
 
 @app.route ('/registros')

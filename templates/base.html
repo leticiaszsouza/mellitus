@@ -16,8 +16,15 @@
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                  <li><button><a href="{{url_for('criarregistro')}}">Criar Registro</a></button></li>
-                  <li><button><a href="{{url_for('dashboard')}}">Dashboard</a></button></li>
+                  <li><button><a href="{{url_for('dashboard')}}">Inicio</a></button></li>
+                  <li>
+                    <div class="fab">
+                        <a href="{{ url_for('criarregistro') }}"
+                          class="btn btn-circle btn-primary">
+                          +
+                        </a>
+                    </div>
+                  </li>
                   <li><button><a href="{{url_for('registros')}}">Meus registros</a></button></li>
                   <li><button><a href="{{url_for('perfil')}}">Perfil </a></button></li>
                 </ul>

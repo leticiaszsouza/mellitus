@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <h2> Criar um Registro </h2>
-
+<div class="flex justify-center items-center">
+    <div class="card bg-base-100 w-200 p-4 shadow-sm">
+        <form action="/criarregistro" method="POST">
+            <div class="card-body gap-4">
+                <h2 class="card-title"> Criar um Registro </h2>
+                    <div class="flex gap-4 ">
+                        <label class="label">Horário</label>
+                        <input type="datetime-local" id="data-hora" name="data_hora" class="input"  />
+                    </div>
+                    <div class="flex gap-4 ">
+                        <label class="label">Glicemia</label>
+                        <input type="number" id="glicemia" class="input" placeholder="md/dL"/> 
+                    </div>
+                    <div class="flex gap-4 ">
+                        <label class="label">Carboidratos</label>
+                        <input type="number" id="carboidratos" class="input" placeholder="g"/> 
+                    </div>
+                    <div class="flex gap-4 ">
+                        <label class="label">Atividade</label>
+                        <input type="time" id="hora" name="hora" class="input"  />
+                    </div>
+                    <div class="flex gap-4 ">
+                        <label class="label">Pressão arterial</label>
+                        <input type="number" class="input" placeholder="mmHg"/> 
+                    </div>
+                    <div class="flex gap-4 ">
+                        <label class="label">Peso corporal</label>
+                        <input type="number" class="input" placeholder="kg"/> 
+                    </div>
+                    <button class="btn btn-primary mt-4">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
