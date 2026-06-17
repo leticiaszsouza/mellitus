@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <h2> Meu Perfil </h2>
+    <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Meu Perfil</h1>
 
+    <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">{{ usuario.nome }}</h2>
+
+            <p><strong>Email:</strong> {{ usuario.email }}</p>
+            <p><strong>Idade:</strong> {{ usuario.idade }}</p>
+            <p><strong>Tipo de Diabetes:</strong> {{ usuario.tipo_diabetes }}</p>
+
+            <button class="btn btn-primary mt-4">
+                Editar Perfil
+            </button>
+        </div>
+    </div>
+</div>
 {% endblock %}
