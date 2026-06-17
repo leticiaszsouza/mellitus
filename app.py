@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask import request, render_template, redirect, url_for 
 app = Flask(__name__)
 
 @app.route ('/')
@@ -6,12 +7,19 @@ def index():
     return render_template('index.html')
 
 @app.route ('/login')
-def login():
+def login(): 
     return render_template ('login.html')
 
-@app.route ('/cadastro')
+@app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
-    return render_template ('cadastro.html')
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+
+        return redirect(url_for('dashboard')) 
+
+    return render_template('cadastro.html')
 
 @app.route ('/dashboard')
 def dashboard():
@@ -27,7 +35,13 @@ def registros():
 
 @app.route ('/perfil')
 def perfil():
-    return render_template('perfil.html')
+    usuario = {
+        'nome': 'Letícia Souza',
+        'email': 'leticia0819@email.com',
+        'idade': 18,
+        'tipo_diabetes': 'Tipo 1'}
+    
+    return render_template('perfil.html', usuario=usuario)
 
 @app.route ('/configuracoes')
 def configuracoes():

@@ -1,37 +1,38 @@
-{% extends 'base.html' %}
+{% extends 'base_publico.html' %}
 
 {% block conteudo %}
-<div class="">
-        <div class="hero bg-base-200 min-h-screen ">
-            <div class="hero-content max-w-5xl flex-col gap-10 lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">Cadastre-se já!</h1>
-                    <p class="py-6">
+<div class="hero bg-base-200 min-h-screen ">
+    <div class="hero-content max-w-5xl flex-col gap-10 lg:flex-row-reverse">
+        <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-bold">Cadastre-se já!</h1>
+            <p class="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                         quasi. In deleniti eaque aut repudiandae et a id nisi.
-                    </p>
-                </div>
+            </p>
+        </div>
 
-                <div class="card bg-base-100 w-full max-w-[500px] max-h-[600px] shrink-0 shadow-2xl">
-                    <div class="card-body card-body flex flex-col items-center">
-                        <fieldset class="fieldset w-full max-w-sm">
-                            <label class="label">Nome</label>
-                            <input type="email" class="input w-full " placeholder="Digite seu nome" />
+        <div class="card bg-base-100 w-full max-w-[500px] max-h-[600px] shrink-0 shadow-2xl">
+            <div class="card-body card-body flex flex-col items-center">
+                <fieldset class="fieldset w-full max-w-sm">
+                    <form action="/cadastro" method="POST">
+                        <label class="label">Nome</label>
+                        <input type="text" name="nome" required class="input w-full" placeholder="Digite seu nome">
 
-                            <label class="label">Email</label>
-                            <input type="email" class="input w-full " placeholder="Digite seu email" />
+                        <label class="label">Email</label>
+                        <input required type="email" name="email" class="input w-full" placeholder="Digite seu email">
 
-                            <label class="label">Senha</label>
-                            <input type="password" class="input w-full" placeholder="Crie uma senha" />
+                        <label class="label">Senha</label>
+                        <input required type="password" name="senha" class="input w-full" placeholder="Crie uma senha">
 
-                            <div><a class="link link-hover">Já tem uma conta? Faça login para entrar</a></div>
-                            
-                            <button class="btn btn-neutral mt-4 ">Entrar</button>
-                        </fieldset>
-                    </div>
-                </div>
+                        <button type="submit" class="btn btn-primary mt-4">
+                                    Cadastrar
+                        </button>
+                    </form>
+                </fieldset>
             </div>
         </div>
     </div>
+</div>
+
 
 {% endblock %}
