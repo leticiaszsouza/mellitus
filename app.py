@@ -13,15 +13,23 @@ def login():
 def cadastro():
     return render_template ('cadastro.html')
 
-@app.route ('/registros')
-def registros():
-    return render_template ('registros.html')
+@app.route ('/dashboard')
+def dashboard():
+    return render_template ('dashboard.html')
 
 @app.route ('/criarregistro')
 def criarregistro():
     return render_template ('criarregistro.html')
 
-@app.route ('/relatorio')
-def relatorio():
-    return render_template ('relatorio.html')
+@app.route ('/registros')
+def registros():
+    return render_template ('registros.html')
+
+@app.route ('/perfil')
+def perfil():
+    return render_template('perfil.html')
+
+@app.route ('/configuracoes')
+def configuracoes():
+    return render_template ('configuracoes.html')
 
