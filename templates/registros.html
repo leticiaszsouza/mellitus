@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <h2> hISTORICO DE registro </h2>
+    <h1> Histórico de Registros </h1>
+    {% for registro in registros %}
+        <h2>Registro</h2>
+    {% endfor %}
 
 {% endblock %}
