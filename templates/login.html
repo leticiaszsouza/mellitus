@@ -6,23 +6,24 @@
         <div class="text-center lg:text-left">
             <h1 class="text-5xl font-bold">Faça login!</h1>
             <p class="py-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        Já possui uma conta e deseja retornar? Faça login para voltar a ter acesso aos nossos conteúdos e aproveitar as funcionalidades novamente!
             </p>
         </div>
 
-        <div class="card bg-base-100 w-full max-w-[500px] max-h-[600px] shrink-0 shadow-2xl">
-            <div class="card-body card-body flex flex-col items-center">
+        <div class="flex card bg-base-100 w-full max-w-[480px] h-[300px] shrink-0 shadow-2xl">
+            <div class="justify-center card-body card-body flex flex-col items-center">
                 <fieldset class="fieldset w-full max-w-sm">
-                    <form action="/login" method="POST">
-                        <label class="label">Email</label>
-                        <input required type="email" name="email" class="input w-full" placeholder="Digite seu email">
-
-                        <label class="label">Senha</label>
-                        <input required type="password" name="senha" class="input w-full" placeholder="Digite sua senha">
-
+                    <form action="/login" method="POST" class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-2">
+                            <label class="label">Email</label>
+                            <input required type="email" name="email" class="input w-full" placeholder="Digite seu email">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="label">Senha</label>
+                            <input required type="password" name="senha" class="input w-full" placeholder="Digite sua senha">
+                        </div>
                         <button type="submit" class="btn btn-primary mt-4">
-                                    Login
+                            Login
                         </button>
                     </form>
                 </fieldset>
