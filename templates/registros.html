@@ -3,43 +3,46 @@
 {% block conteudo %}
 <div>
     <h2 class="text-lg font-bold mb-4"> Seu histórico de registros... </h2>
-    <div class="overflow-x-auto w-400 ">
-        <table class="table table-xs">
-            <thead>
-            <tr>
-                <th>Horário</th>
-                <th>Data</th>
-                <th>Glicose</th>
-                <th>Carboidratos</th>
-                <th>Atividade</th>
-                <th>Pressão Arterial</th>
-                <th>Peso Corporal</th>
-                <th>Variação </th>
-            </tr>
-            </thead>
-            <tbody>
+    {% for registro in registros %}
+    
+        <div class="overflow-x-auto w-400 ">
+            <table class="table table-xs">
+                <thead>
                 <tr>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
+                    <th>Horário</th>
+                    <th>Data</th>
+                    <th>Glicose</th>
+                    <th>Carboidratos</th>
+                    <th>Atividade</th>
+                    <th>Pressão Arterial</th>
+                    <th>Peso Corporal</th>
+                    <th>Variação </th>
                 </tr>
-                <tr>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                    <td> - </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                    <tr>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endfor %}
 </div>
 {% endblock %}
