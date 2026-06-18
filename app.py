@@ -73,5 +73,5 @@ def contatos():
             assunto=assunto,
             mensagem=mensagem,
         )
-
+ 
     return render_template('contatos.html')
