@@ -53,3 +53,25 @@ def perfil():
 def configuracoes():
     return render_template ('configuracoes.html')
 
+@app.route('/contatos', methods=['GET', 'POST'])
+def contatos():
+    success_message = None
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        assunto = request.form.get('assunto')
+        mensagem = request.form.get('mensagem')
+
+        # Aqui você pode enviar um e-mail ou salvar a mensagem em banco.
+        success_message = 'Recebemos sua mensagem! Retornaremos em breve.'
+
+        return render_template(
+            'contatos.html',
+            success_message=success_message,
+            nome=nome,
+            email=email,
+            assunto=assunto,
+            mensagem=mensagem,
+        )
+
+    return render_template('contatos.html')
