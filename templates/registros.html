@@ -1,9 +1,44 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <h1> Histórico de Registros </h1>
-    {% for registro in registros %}
-        <h2>Registro</h2>
-    {% endfor %}
+    <h2> Seu histórico de registros... </h2>
+    <div class="overflow-x-auto w-400 ">
+        <table class="table table-xs">
+            <thead>
+            <tr>
+                <th>Horário</th>
+                <th>Data</th>
+                <th>Glicose</th>
+                <th>Carboidratos</th>
+                <th>Atividade</th>
+                <th>Pressão Arterial</th>
+                <th>Peso Corporal</th>
+                <th>Variação </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+                <tr>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                    <td> - </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 {% endblock %}
